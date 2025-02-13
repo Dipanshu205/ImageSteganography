@@ -9,6 +9,7 @@ m = input("Enter location of img.npy : ")
 h = np.load(m)
 
 t=[]
+global dkey
 p=input("Enter location of data.csv file : ")
 with open(p, 'r') as file:
     reader = csv.reader(file)
@@ -49,7 +50,6 @@ z=0
 
 hiddnmsg=""
 for i in range(l-1):
-    global dkey
     hiddnmsg+=c[h[x,y,z]^d[dkey[kl]]]
     x=x+1
     y=y+1
